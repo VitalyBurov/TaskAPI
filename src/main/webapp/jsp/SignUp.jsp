@@ -7,8 +7,7 @@
    <meta charset="utf-8">
  </head>
  <body>
-  <form action= "${pageContext.request.contextPath}/api/user" method="POST">
-    <p>Login: <input type="text" name="login" /></p>
+<form action = <%=request.getContextPath() + "/api/user"%> method = "POST">    <p>Login: <input type="text" name="login" /></p>
     <p>Password: <input type="text" name="password" /></p>
     <p>Last name: <input type="text" name="lastName" /></p>
     <p>First name: <input type="text" name="firstName" /></p>

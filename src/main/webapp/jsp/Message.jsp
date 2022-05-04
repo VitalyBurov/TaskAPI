@@ -7,8 +7,7 @@
    <meta charset="utf-8">
  </head>
  <body>
-  <form action= "${pageContext.request.contextPath}/api/login" method="POST">
-    <p>Message to: <input type="text" name="login" /></p>
+<form action = <%=request.getContextPath() + "/api/message"%> method = "POST">    <p>Message to: <input type="text" name="login" /></p>
     <p>Message content: <input type="text" name="message" /></p>
   </form>
   <form>
