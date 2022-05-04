@@ -37,6 +37,8 @@ public class RegistrationServlet extends HttpServlet {
         UserService userService = UserService.getInstance();
         try {
             userService.signUp(user);
+            String contextPath = req.getContextPath();
+            resp.sendRedirect(contextPath + "/ui/signIn");
         } catch (IllegalArgumentException e) {
             writer.write(e.getMessage());
         }

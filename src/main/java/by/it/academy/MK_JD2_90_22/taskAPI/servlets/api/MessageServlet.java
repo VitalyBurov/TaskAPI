@@ -52,7 +52,7 @@ public class MessageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         HttpSession session = req.getSession();
-        String toWhom = req.getParameter("toWhom");
+        String login = req.getParameter("login");
         String messageContent = req.getParameter("message");
 
 
@@ -63,7 +63,7 @@ public class MessageServlet extends HttpServlet {
         if(user == null){
             writer.write("401: Unauthorized");
         }
-        Message message = new Message(user.getLogin(), toWhom, messageContent);
+        Message message = new Message(user.getLogin(), login, messageContent);
         MessageService messageService = MessageService.getInstance();
         try {
             messageService.sendMessage(message);

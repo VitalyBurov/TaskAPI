@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.*, java.text.*" %>
 
 <html>
  <head>
@@ -7,11 +6,11 @@
    <meta charset="utf-8">
  </head>
  <body>
-<form action = <%=request.getContextPath() + "/api/message"%> method = "POST">    <p>Message to: <input type="text" name="login" /></p>
+<form action = <%=request.getContextPath() + "/api/message"%> method = "POST">
+    <p>Message to: <input type="text" name="login" /></p>
     <p>Message content: <input type="text" name="message" /></p>
+    <input type = "submit" value = "Send" />
   </form>
-  <form>
-        <input type="submit" value="Send"></p>
-        </form>
+
  </body>
 </html>
